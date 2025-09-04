@@ -1,0 +1,13 @@
+.roundbox{
+    position: absolute;
+    justify-self: center;
+    align-items: start;
+    align-self: center;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: #e9f5ecce;
+}

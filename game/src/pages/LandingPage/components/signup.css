@@ -1,0 +1,59 @@
+.roundedBox{
+    position: absolute;
+    display: grid;
+    justify-self: center;
+    align-items: start;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgba(228, 240, 225, 0.923);
+}
+
+.topBar{
+    justify-content: start;
+    margin: 10px;
+    height: 20px;
+    display: flex;
+}
+
+.form{
+    display: grid;
+    padding: 10px;
+}
+
+.entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2a7e52;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
+input{
+    border: 0px;
+    height: 30px;
+    width: 250px;
+    margin: 4px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+label{
+    justify-content: left;
+}
+
+h2{
+    flex-basis: auto; 
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    padding-top: 30px;
+    font-size: 27px;
+    color: #2a7e52;
+    font-family: 'Inter', sans-serif;
+}
