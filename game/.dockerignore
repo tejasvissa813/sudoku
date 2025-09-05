@@ -1,0 +1,25 @@
+node_modules
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Build outputs
+build
+dist
+.cache
+
+# Git
+.git
+.gitignore
+
+# Environment & local configs
+.env
+.env.*
+.vscode
+.idea
+.DS_Store
+*.swp
+
+# Docker itself
+Dockerfile
+.dockerignore

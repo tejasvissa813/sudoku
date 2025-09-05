@@ -11,12 +11,12 @@ import "os/exec"
 func main() {
 	log.Print("SERVER LISTENING1")
 	gameHandler := func(w http.ResponseWriter, req *http.Request){
-		if err := exec.Command("make", "clean").Run(); err != nil{
-			log.Fatalf("make clean failed: %v", err)
-		}
-		if err := exec.Command("make", "solver").Run(); err != nil{
-			log.Fatalf("make run failed: %v", err)
-		}
+		// if err := exec.Command("make", "clean").Run(); err != nil{
+		// 	log.Fatalf("make clean failed: %v", err)
+		// }
+		// if err := exec.Command("make", "solver").Run(); err != nil{
+		// 	log.Fatalf("make run failed: %v", err)
+		// }
 		cmd := exec.Command("./solver")
 		stdout, stderr := cmd.StdoutPipe()
 		if stderr != nil {
