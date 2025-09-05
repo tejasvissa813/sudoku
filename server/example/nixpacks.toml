@@ -1,11 +1,9 @@
 [phases.setup]
-packages = ["build-essential" "g++" "golang"]
+packages = ["build-essential", "g++", "golang"]
 
 [phases.build]
 commands = [
-  # Build C++ solver
   "g++ -o solver solver.cpp -static",
-  # Build Go server statically
   "CGO_ENABLED=0 GOOS=linux go build -o go-server"
 ]
 
