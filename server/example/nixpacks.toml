@@ -3,15 +3,15 @@ packages = ["build-essential", "g++", "golang"]
 
 [phases.build]
 commands = [
-  "mkdir -p /app",
-  "cp *.go *.cpp /app/",
-  "cd /app",
   "g++ -o solver solver.cpp -static",
   "CGO_ENABLED=0 GOOS=linux go build -o go-server"
 ]
 
 [phases.start]
-commands = ["./go-server"]
+commands = [
+  "chmod +x ./go-server",
+  "./go-server"
+]
 
 [env]
 PORT = "8080"
