@@ -1,0 +1,19 @@
+[phases.setup]
+# Install packages needed for both builds
+packages = ["build-essential" "g++" "golang" "alpine-sdk"]
+
+[phases.build.cpp]
+# Build your C++ solver
+commands = [
+  "g++ -o solver solver.cpp -static"
+]
+
+[phases.build.go]
+# Build your Go server statically
+commands = [
+  "CGO_ENABLED=0 GOOS=linux go build -o go-server"
+]
+
+[phases.deploy]
+# Nothing special needed; Nixpacks will copy the binaries to the container
+start_command = "./go-server"
