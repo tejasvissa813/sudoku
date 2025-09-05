@@ -11,7 +11,7 @@ RUN go mod download
 COPY *.go ./
 RUN CGO_ENABLED=0 GOOS=linux go build -o /go-server
 
-FROM alpine:latest
+FROM ubuntu:latest
 WORKDIR /app
 COPY --from=cpp-build /app/solver ./solver
 COPY --from=go-build /app/go-server ./go-server
