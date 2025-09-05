@@ -37,7 +37,7 @@ func main() {
 			log.Fatalf("Command finished with error:")
 		}
 
-		w.Header().Set("Access-Control-Allow-Origin", "http://localhost:3000")
+		w.Header().Set("Access-Control-Allow-Origin", "http://0.0.0.0:8080")
 		if(output != nil){
 			io.WriteString(w, string(output))
 		}
